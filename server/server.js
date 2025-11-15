@@ -4,8 +4,7 @@ import dotenv from 'dotenv/config';
 import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRouter from './routes/authRoutes.js'
-
-
+import performanceRoutes from "./routes/performanceRoutes.js";
 
 
 const app =express();
@@ -22,6 +21,8 @@ app.use(cors({origin: allowedOrigins,credentials:true}))
 app.get('/',(req,res)=>res.send("API working fine"));
 app.use('/api/auth',authRouter)
 //app.use('/api/user', userRouter)
+app.use("/api/performance", performanceRoutes);
+
 
 
 app.listen(port,()=> console.log(`server started on PORT:${port}`));
