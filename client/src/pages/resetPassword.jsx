@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { assets } from '../assets/assets'
+import { assets } from '../assets/emailTemplates.js'
 
 import { useNavigate } from 'react-router';
-import { AppContent } from '../context/AppContext';
+import { AppContent } from '../context/appContext.jsx';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
